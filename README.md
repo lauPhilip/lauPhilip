@@ -14,7 +14,7 @@ I build AI assistants and automation for companies — and the business cases th
 <!-- WORK:START -->
 | Project | What it is | Built with | Code |
 |---|---|---|---|
-| [Coursebot](https://lauphilip.github.io/#project/project_au-btech-course-bot) | Lets teachers build a chatbot for their course, no code needed | Generative AI, RAG, PHP | [repo](https://github.com/lauPhilip/au-btech-coursebot-platform) |
+| [Coursebot](https://lauphilip.github.io/#project/project_au-btech-course-bot) | Lets teachers build a chatbot for their course, no code needed | Laravel, Vue, PHP | private |
 | [AskEIVA](https://lauphilip.github.io/#project/project_ask_eiva) | Support assistant that searches technical manuals and past tickets | C#, .NET 10, Clean Architecture | [repo](https://github.com/lauPhilip/AskEIVANet) |
 | [TraceableAI](https://lauphilip.github.io/#project/project_au-btech-literature-review) | AI literature reviews that show where every result comes from | C#, .NET 10, Mistral Large | [repo](https://github.com/lauPhilip/au-btech-literature-review-agent) |
 | [LUMA](https://lauphilip.github.io/#project/project_luma-personal-ai-agent) | Personal desktop AI assistant with voice, news, camera and music | Python, PyQt6, Ollama | private |
