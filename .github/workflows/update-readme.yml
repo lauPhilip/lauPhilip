@@ -1,0 +1,36 @@
+name: Update profile README
+
+# Pulls "Right now", selected work and skills from lauphilip.github.io
+# so the profile stays in sync with the portfolio.
+on:
+  schedule:
+    - cron: '17 6 * * 1'   # every Monday morning (UTC)
+  workflow_dispatch:        # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Rebuild README from portfolio data
+        run: node scripts/build-readme.mjs
+
+      - name: Commit if something changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: sync README with portfolio"
+          git push
